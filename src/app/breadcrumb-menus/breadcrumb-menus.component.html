@@ -1,0 +1,10 @@
+<nav aria-label="breadcrumb" class="container" *ngIf="menus.length">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item v-menu-item" *ngFor="let menu of menus; index as i">
+       <a class="menu-link" [routerLink]="menu.routerLink" *ngIf="i !== menus.length -1; else ShowMenu">{{ menu.text | translate }}</a>
+       <ng-template #ShowMenu>
+        <strong class="show-menu">{{ menu.text | translate }}</strong>
+       </ng-template>
+    </li>
+  </ol>
+</nav>

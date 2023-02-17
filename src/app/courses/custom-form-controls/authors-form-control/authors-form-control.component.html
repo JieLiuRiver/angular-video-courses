@@ -1,0 +1,14 @@
+<!--
+<select multiple name="authors" (change)="onChange2($event)" class="form-control">
+  <option *ngFor="let option of authors" [ngValue]="option.value">{{ option.label }}</option>
+</select> -->
+
+
+<ng-multiselect-dropdown
+  [settings]="dropdownSettings"
+  [data]="authors"
+  [(ngModel)]="value"
+  (onSelect)="onItemSelect($event)"
+  (onDropDownClose)="onTouched()"
+>
+</ng-multiselect-dropdown>

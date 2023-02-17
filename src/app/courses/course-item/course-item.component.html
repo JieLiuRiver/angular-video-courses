@@ -1,0 +1,26 @@
+<div *ngIf="info" class="v-course-item" [ngClass]="{'top-rated-item': info.topRated}" [appCourseStatusByCreationDate]="info.creationDate">
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="d-flex justify-content-start align-items-center">
+      <h3 [style.margin-bottom]="0" class="v-course-title">{{ info.name | uppercase }} </h3>
+      <svg *ngIf="info.topRated" width="32" height="32" viewBox="0 0 24 24"><path fill="#f50" d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275Z"/></svg>
+    </div>
+    <div class="d-flex justify-content-between align-items-center v-extra-info">
+      <div class="d-flex justify-content-between align-items-center">
+        {{ (info.length || 0) | duration }}
+      </div>
+      <div style="width: 15px"></div>
+      <div class="d-flex justify-content-between align-items-center">
+        {{info.date | date:'d LLL yyyy'}}
+      </div>
+    </div>
+  </div>
+  <div class="d-flex justify-content-between align-items-center">
+    <p class="v-course-desc">{{ info.description }}</p>
+    <div style="width: 30px"></div>
+    <div class="d-flex justify-content-between align-items-center">
+      <button type="button" class="btn btn-primary btn-sm edit-button" (click)="doEdit($event)">{{ 'EDIT_BUTTON' | translate}}</button>
+      <div style="width: 15px"></div>
+      <button type="button" class="btn btn-danger btn-sm delete-button" (click)="doDelete($event)">{{ 'DELETE_BUTTON' | translate }}</button>
+    </div>
+  </div>
+</div>

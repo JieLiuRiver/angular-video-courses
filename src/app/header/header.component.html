@@ -1,0 +1,11 @@
+<header class='text-white d-flex justify-content-between align-items-center fixed-top v-header'>
+  <app-logo>{{ 'TITLE' | translate }}</app-logo>
+  <div class='d-flex justify-content-center align-items-center'>
+    <select [(ngModel)]="selectedLanguage" (change)="switchLanguage()">
+      <option *ngFor="let language of languages" [value]="language">{{ language }}</option>
+    </select>
+    <app-user-login [appIfAuth]></app-user-login>
+    <app-space x="10px"></app-space>
+    <app-user-logoff></app-user-logoff>
+  </div>
+</header>

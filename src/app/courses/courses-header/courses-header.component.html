@@ -1,0 +1,13 @@
+<div class="v-courses-header">
+  <form [formGroup]="form">
+    <div class="d-flex justify-content-start align-items-center">
+      <input formControlName="inputValue" (keyup)="keyUp.next($event)" style="flex: 0 0 250px" type="text" class="form-control search-input" [placeholder]="'SEARCH_COURSE_PLEACHOLDER' | translate" >
+      <div style="width: 10px"></div>
+    </div>
+  </form>
+  <div class="d-flex justify-content-end align-items-center">
+    <button type="button" class="btn btn-primary add-course">
+      <a class="add-link" [routerLink]="['/courses', 'new']">{{ 'ADD_COURSE_BUTTON' | translate }}</a>
+    </button>
+  </div>
+</div>

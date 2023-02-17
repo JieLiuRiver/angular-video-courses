@@ -1,0 +1,32 @@
+.v-course-item {
+  padding: 15px;
+  border-radius: 4px;
+  /* box-shadow: 1px 1px 6px -2px rgba(0,0,0,0.75); */
+  border: 5px solid #ccc;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.v-course-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.v-course-desc {
+  font-size: 14px;
+  color: rgba(0,0,0,0.65);
+  word-break: break-all;
+  white-space:normal;
+  word-wrap: break-word;
+  line-height: 18px;
+}
+.v-extra-info {
+  color: rgba(0,0,0,0.5);
+  font-size: 12px;
+}
+.top-rated-item {
+  background-color: rgba(0,0,0,0.3);
+}
+.edit-button,
+.delete-button{
+  width: 60px;
+}

@@ -1,0 +1,11 @@
+<div class="courses-box">
+  <app-course-list
+    (onDeleteCourse)="doDeleteCourseTask($event)"
+    (onEditCourse)="doEditCourseTask($event)"
+    (onPressSearchButton)="onSearchInput($event)"
+    (onSearch)="onSearchInput($event)"
+    (onLoadMoreEvent)="onLoadMoreEvent()"
+  ></app-course-list>
+  <app-loading *ngIf="loadingService.isLoading$ | async"></app-loading>
+</div>
+

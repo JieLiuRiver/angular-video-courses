@@ -1,0 +1,9 @@
+<input
+  type="text"
+  [(ngModel)]="value"
+  (change)="handleChange($event)"
+  (blur)="onTouched()"
+  class="form-control"
+  id="creationDate"
+  [placeholder]="'ADD_COURSE_FORM_DATE_FIELD_PLEACHOLDER' | translate"
+/>

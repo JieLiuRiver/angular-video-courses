@@ -1,0 +1,15 @@
+.login-box {
+  padding-bottom: 50px;
+  margin-top: 50px;
+  position: relative;
+}
+
+.login-box .card-title {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.error-message {
+  font-size: 13px;
+  color: red;
+}

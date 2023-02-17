@@ -1,0 +1,21 @@
+<div class="container courses-box">
+  <app-courses-header (onSearchInput)="doSearchInput($event)" (onPressSearchButton)="doPressSearchButton($event)"></app-courses-header>
+  <div *ngIf="courses$ | async as courses; else EmptyMessage">
+    <ul class="list-group">
+      <li *ngFor="let course of courses | orderBy; trackBy:trackByItem" class="list-item"> <!--  -->
+        <app-course-item
+          [info]="course"
+          (onDeleteCourse)="doDeleteCourseTask(course.id)"
+          (onEditCourse)="doEditCourseTask(course.id)"
+        ></app-course-item>
+      </li>
+    </ul>
+    <app-load-more (onLoadMore)="onLoadMore()"></app-load-more>
+  </div>
+</div>
+
+<ng-template #EmptyMessage>
+  <div class="d-flex justify-content-center align-items-center p-10">
+    <strong>NO DATA, FEEL FREE To ADD NEW COURSE</strong>
+  </div>
+</ng-template>

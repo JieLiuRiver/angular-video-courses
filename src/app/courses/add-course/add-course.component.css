@@ -1,0 +1,12 @@
+.cancel-link {
+  text-decoration: none;
+  color: #fff;
+}
+.a-box {
+  margin-top: 100px;
+}
+
+.error-message {
+  color: red;
+  font-size: 13px;
+}
